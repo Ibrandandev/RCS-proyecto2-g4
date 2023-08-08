@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/vapor/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="/css/global.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
@@ -58,7 +59,33 @@
         </div>
       </div>
     </nav>
-    <main class="container py-3"></main>
+    <main>
+      <div class="row my-5 ">
+        <div class=" col-12 col-md-4 offset-md-4 d-flex justify-content-center">
+          <div class="card" style="width: 30rem" >
+            <img src="../assets/LOGO.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">RollinGames</h5>
+              <p class="card-text">
+                <form id="formulario">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Ingrese su Correo</label>
+                      <input type="email" class="form-control" id="correo" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Ingrese su contraseña</label>
+                      <input type="password" class="form-control" id="contraseña">
+                    </div>
+                    <div class="mt-4 d-flex justify-content-end">
+                        <button class="btn btn-primary ">Iniciar</button>
+                    </div>
+                  </form>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="mt-auto bg-dark text-body pt-5 pb-4 d-flex align-items-end">
       <div class="container text-center text-md-start">
         <div class="row text-center text-md-start">
@@ -120,6 +147,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/login.js"></script>
     <script src="/js/global.js"></script>
   </body>
 </html>

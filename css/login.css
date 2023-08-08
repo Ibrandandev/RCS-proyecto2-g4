@@ -1,0 +1,11 @@
+main{
+    margin:0;
+    background-image:
+    url(../assets/juegos.png);
+}
+.card{
+    background-color: rgb(26, 9, 51);
+    outline: 3px  rgb(0, 255, 234);
+    outline-style: double;
+    z-index: 0;
+}
