@@ -19,6 +19,6 @@ const login =(event)=>{
         }
     } else {
         alert("El correo o la contraseña es incoreecta!");
-      };
+    };
     };
 document.getElementById("formulario").addEventListener("submit", login);
