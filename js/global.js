@@ -233,7 +233,7 @@ const listarCategoriasEnFooter = () => {
       footerCategorias.append(a);
     });
   }
-};
+};WebGLActiveInfo
 
 listarCategoriasEnMenu();
 listarCategoriasEnFooter();
