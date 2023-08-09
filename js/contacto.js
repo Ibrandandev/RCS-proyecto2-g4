@@ -17,7 +17,7 @@ const enviarEmail = (e) => {
         height: 700px;
         width: 100%;
         background-color: #1a0933;
-        display: grid;
+        display: grid;s
         place-items: center;
       "
     >

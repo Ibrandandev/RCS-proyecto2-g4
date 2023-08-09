@@ -91,9 +91,9 @@ const inicializacionJuegos = () => {
       categoria: "Accion",
       precio: 500,
       imagen:
-        "https://i.3djuegos.com/juegos/13424/red_dead_3__nombre_temporal_/fotos/ficha/red_dead_3__nombre_temporal_-5009894.webp",
+        "https://a.thumbs.redditmedia.com/9nnZ7AEPqE1a5V88wh_9nCZc2dpqD9FQhKiyquheVE0.png",
       video:
-        "https://www.youtube.com/watch?v=Y-x0efG1seA&ab_channel=SuperAffiliateMillionaireTV",
+        "https://www.youtube.com/watch?v=MyaYlbizpvs&ab_channel=RockstarGamesEspa%C3%B1a",
       favorito: false,
     },
     {
@@ -103,9 +103,9 @@ const inicializacionJuegos = () => {
       categoria: "Deportes",
       precio: 750,
       imagen:
-        "https://i.3djuegos.com/juegos/18521/fifa_23/fotos/ficha/fifa_23-5756987.webp",
+        "https://storage.gra.cloud.ovh.net/v1/AUTH_296c7803aa594af69d39b970927c8fb9/media/game_avatars/gQ/gQ0jjSJxZygXlL1r.jpeg",
       video:
-        "https://www.youtube.com/watch?v=Y-x0efG1seA&ab_channel=SuperAffiliateMillionaireTV",
+        "https://www.youtube.com/watch?v=zMyeAFzCTM0&ab_channel=PlayStationLatinoam%C3%A9rica",
       favorito: false,
     },
     {
@@ -115,9 +115,9 @@ const inicializacionJuegos = () => {
       categoria: "Simulacion",
       precio: 250,
       imagen:
-        "https://media.vandal.net/t200/15192/grand-theft-auto-v-2015413122229_1.jpg",
+        "https://storage.gra.cloud.ovh.net/v1/AUTH_296c7803aa594af69d39b970927c8fb9/media/game_avatars/cF/cF6dNaqZkGSyVSoE.png",
       video:
-        "https://www.youtube.com/watch?v=Y-x0efG1seA&ab_channel=SuperAffiliateMillionaireTV",
+        "https://www.youtube.com/watch?v=QkkoHAzjnUs&ab_channel=RockstarGames",
       favorito: false,
     },
     {
@@ -127,9 +127,9 @@ const inicializacionJuegos = () => {
       categoria: "Simulacion",
       precio: 999,
       imagen:
-        "https://i.3djuegos.com/juegos/900/need_for_speed_underground_2/fotos/ficha/need_for_speed_underground_2-1679146.webp",
+        "https://www.regfiles.net/media/registry/registry/need-for-speed-underground-2-icon.jpg",
       video:
-        "https://www.youtube.com/watch?v=Y-x0efG1seA&ab_channel=SuperAffiliateMillionaireTV",
+        "https://www.youtube.com/watch?v=M4hwG0NujpI&ab_channel=ElectronicArtsLatam",
     },
     {
       id: 6,
@@ -138,20 +138,9 @@ const inicializacionJuegos = () => {
       categoria: "Accion",
       precio: 740,
       imagen:
-        "https://i.3djuegos.com/juegos/15622/battlefield__2018_/fotos/ficha/battlefield__2018_-4555852.webp",
+        "https://www.techpowerup.com/review/battlefield-v-benchmark-performance-test/images/small.png",
       video:
-        "https://www.youtube.com/watch?v=Y-x0efG1seA&ab_channel=SuperAffiliateMillionaireTV",
-    },
-    {
-      id: 7,
-      nombre: "Los Sims 3",
-      descripcion: "Descripcion Breve",
-      categoria: "Estrategia",
-      precio: 600,
-      imagen:
-        "https://i.3djuegos.com/juegos/2805/los_sims_3/fotos/ficha/los_sims_3-1691353.webp",
-      video:
-        "https://www.youtube.com/watch?v=Y-x0efG1seA&ab_channel=SuperAffiliateMillionaireTV",
+        "https://www.youtube.com/watch?v=fb1MR85XFOc&ab_channel=Battlefield",
     },
   ];
 
@@ -215,7 +204,7 @@ const listarCategoriasEnMenu = () => {
   categorias.forEach((categoria) => {
     const li = document.createElement("li");
     const ulContenido = `
-      <a class="dropdown-item text-body" href="#">
+      <a class="dropdown-item text-body link-categoria" href="/index.html?categoria=${categoria}">
         ${categoria}
       </a>
     `;
@@ -228,7 +217,7 @@ const listarCategoriasEnFooter = () => {
   if (footerCategorias) {
     categorias.forEach((categoria) => {
       const a = document.createElement("a");
-      a.href = "#";
+      a.href = `/index.html?categoria=${categoria}`;
       a.classList = "text-body";
       a.innerText = categoria;
       footerCategorias.append(a);

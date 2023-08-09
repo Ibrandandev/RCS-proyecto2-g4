@@ -5,3 +5,8 @@ body {
 .logo {
   width: 30px;
 }
+
+.link-categoria:hover {
+  color: #170229 !important;
+  font-weight: bold;
+}
