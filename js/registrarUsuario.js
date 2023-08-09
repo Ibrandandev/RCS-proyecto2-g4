@@ -13,25 +13,30 @@ const registrarUsuario = (event)=>{
 
 
     if (!validar){
-        let usuario = new Usuario(id,name,last_name, email,password);
-        console.log(usuario);
+        let usuario = new Usuario(id, name, last_name, email, password);
 
         usuarios.push(usuario);
         
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-        document.querySelector("#nombre").value = "";
-        document.querySelector("#apellido").value = "";
-        document.querySelector("#correo").value = "";
-        document.querySelector("#contraseña").value="";
+        
+            document.querySelector("#nombre").value = "";
 
+            document.querySelector("#apellido").value = "";
+            document.querySelector("#correo").value = "";
+            document.querySelector("#contraseña").value="";
+        
+            location.replace("../pages/login.html");
+          
+        } else {
+            alert("El correo ya se encuentra registrado");
+        };
+ 
+    };
 
-        location.replace("../pages/login.html");
-    } else {
-        alert("El correo ya se encuentra registrado");
-    }
-
-    
-
-};
 document.getElementById("formulario").addEventListener("submit", registrarUsuario);
+
+
+
+  
+
