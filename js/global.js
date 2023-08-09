@@ -13,8 +13,10 @@ class Juego {
 }
 
 class Usuario {
-  constructor(id, email, password) {
+  constructor(id, nombre, apellido, email, password) {
     this.id = id;
+    this.nombre=nombre;
+    this.apellido=apellido;
     this.email = email;
     this.password = password;
     this.aprobado = false;
@@ -175,6 +177,8 @@ const inicializacionUsuarios = () => {
   const data = [
     {
       id: 1,
+      nombre:"Ignacio",
+      apellido:"Brandan",
       email: "ignacio@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -182,6 +186,8 @@ const inicializacionUsuarios = () => {
     },
     {
       id: 2,
+      nombre:"Abel",
+      apellido:"Lobo",
       email: "abel@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -189,6 +195,8 @@ const inicializacionUsuarios = () => {
     },
     {
       id: 3,
+      nombre:"Gonzalo",
+      apellido:"garcia",
       email: "gonzalo@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -196,6 +204,8 @@ const inicializacionUsuarios = () => {
     },
     {
       id: 4,
+      nombre:"Flor",
+      apellido:"Zelarayan",
       email: "flor@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -204,7 +214,7 @@ const inicializacionUsuarios = () => {
   ];
 
   data.forEach((usuario) => {
-    usuarios.push(new Usuario(usuario.id, usuario.email, usuario.password));
+    usuarios.push(new Usuario(usuario.id, usuario.nombre, usuario.apellido, usuario.email, usuario.password));
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     location.reload();
   });
