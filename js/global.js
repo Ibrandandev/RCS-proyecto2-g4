@@ -13,8 +13,10 @@ class Juego {
 }
 
 class Usuario {
-  constructor(id, email, password) {
+  constructor(id, nombre, apellido, email, password) {
     this.id = id;
+    this.nombre = nombre;
+    this.apellido = apellido;
     this.email = email;
     this.password = password;
     this.aprobado = false;
@@ -116,7 +118,6 @@ const inicializacionJuegos = () => {
         "https://media.vandal.net/t200/15192/grand-theft-auto-v-2015413122229_1.jpg",
       video:
         "https://www.youtube.com/watch?v=Y-x0efG1seA&ab_channel=SuperAffiliateMillionaireTV",
-
       favorito: false,
     },
     {

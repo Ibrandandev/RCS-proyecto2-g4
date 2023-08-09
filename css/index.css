@@ -1,0 +1,17 @@
+.video-destacado {
+  min-height: 500px;
+}
+
+.img-juego {
+  height: 350px;
+}
+
+.btn-destacado {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-destacado {
+    width: 50%;
+  }
+}

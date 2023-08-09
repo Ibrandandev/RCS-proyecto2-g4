@@ -28,12 +28,12 @@ const enviarEmail = (e) => {
           Rolling Games
         </h1>
         <p
-          style="margin: 1rem auto; font-family: 'Lobster', cursive; max-width: 50%;"
+          style="margin: 1rem auto; font-family: 'Lobster', cursive; max-width: 50%; text-align:center;"
         >
           Correo Electronico: ${email}
         </p>
         <p
-          style="margin: 1rem auto; font-family: 'Lobster', cursive; max-width: 50%;"
+          style="margin: 1rem auto; font-family: 'Lobster', cursive; max-width: 50%; text-align:center;"
         >
           Mensaje: ${mensaje}
         </p>
