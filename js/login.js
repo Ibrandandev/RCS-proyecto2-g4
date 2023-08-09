@@ -1,24 +1,17 @@
-const admin={
-    correo:"admin@rolling.com",
-    contraseña:"rolling12345",
-};
-
-let usuario = JSON.parse(localStorage.getItem("user")) || null;
-
 const login =(event)=>{
     event.preventDefault();
 
+
+
     let correo=document.querySelector("#correo").value;
     let contraseña=document.querySelector("#contraseña").value;
+    
+    let validar = usuarios.filter(usuarios=> {return usuarios.email == correo && usuarios.password==contraseña});
 
-    if(correo===admin.correo){
-        if(contraseña===admin.contraseña){
-            console.log("Mensaje de prueba");
-            localStorage.setItem("user", JSON.stringify(correo));
-            location.replace("../index.html");
-        }
+    if (validar.length>0){
+        location.replace ("/index.html");
     } else {
-        alert("El correo o la contraseña es incoreecta!");
-    };
+        alert("El correo o contraseña ingresado son incorrectos");
+    }
     };
 document.getElementById("formulario").addEventListener("submit", login);
