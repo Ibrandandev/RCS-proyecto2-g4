@@ -222,7 +222,6 @@ const inicializacionUsuarios = () => {
   ];
 
   data.forEach((usuario) => {
-
     usuarios.push(
       new Usuario(
         usuario.id,
@@ -266,3 +265,11 @@ const listarCategoriasEnFooter = () => {
 
 listarCategoriasEnMenu();
 listarCategoriasEnFooter();
+
+if (usuarios.length === 0) {
+  inicializacionUsuarios();
+}
+
+if (juegos.length === 0) {
+  inicializacionJuegos();
+}
