@@ -13,14 +13,22 @@ class Juego {
 }
 
 class Usuario {
-  constructor(id, nombre, apellido, email, password) {
+  constructor(
+    id,
+    nombre,
+    apellido,
+    email,
+    password,
+    aprobado = false,
+    admin = false
+  ) {
     this.id = id;
     this.nombre = nombre;
     this.apellido = apellido;
     this.email = email;
     this.password = password;
-    this.aprobado = false;
-    this.admin = false;
+    this.aprobado = aprobado;
+    this.admin = admin;
   }
 }
 
@@ -41,7 +49,7 @@ const ulCategorias = document.querySelector("#ul-categorias");
 
 const footerCategorias = document.querySelector("#footer-categorias");
 
-const usuario = localStorage.getItem("usuario") || null;
+const usuario = JSON.parse(localStorage.getItem("usuario")) || null;
 
 const navbarUl = document.querySelector("#navbar-ul");
 
@@ -213,7 +221,9 @@ const inicializacionUsuarios = () => {
         usuario.nombre,
         usuario.apellido,
         usuario.email,
-        usuario.password
+        usuario.password,
+        usuario.aprobado,
+        usuario.admin
       )
     );
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
