@@ -13,7 +13,7 @@ const listarDestacado = () => {
             src="https://www.youtube.com/embed/${
               destacado.video.split("&")[0].split("v=")[1]
             }" 
-            class="w-100 h-100 video-destacado" 
+            class="w-100 h-100" 
             title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay;        
@@ -30,7 +30,7 @@ const listarDestacado = () => {
           }" class="img-fluid rounded d-none d-lg-flex mb-3" alt="" />
           
           <p class="fw-bold">Categoria: ${destacado.categoria}</p>
-          <p class="fs-4 text-secondary fw-bold">¡Juego destacado!</p>
+          <p class="fs-4 text-secondary fw-bold text-nowrap">¡Juego destacado!</p>
           <a class="btn btn-dark btn-destacado" href="/pages/juego.html?id=${
             destacado.id
           }">Ver más</a>
