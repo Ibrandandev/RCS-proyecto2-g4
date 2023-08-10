@@ -1,0 +1,12 @@
+input::placeholder {
+  color: #aaa !important;
+}
+
+.form-control,
+.form-select {
+  color: #404040 !important;
+}
+
+.btn-close {
+  opacity: 1;
+}
