@@ -1,0 +1,4 @@
+img:hover {
+  filter: grayscale(50%);
+  transition: 350ms;
+}

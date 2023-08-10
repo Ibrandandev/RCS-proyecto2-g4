@@ -4,14 +4,14 @@ const idJuego = datos.get("id");
 let contenedor = document.querySelector("#contenido");
 const juegos = JSON.parse(localStorage.getItem("juegos")) || [];
 
-const datosJuegos =()=>{
-    let detalle = juegos.find((juego)=>juego.id == idJuego);
+const datosJuegos = () => {
+  let detalle = juegos.find((juego) => juego.id == idJuego);
 
-    if(detalle) {
-        let col =document.createElement("div");
-        col.classList="col";
+  if (detalle) {
+    let col = document.createElement("div");
+    col.classList = "col";
 
-        let tarjeta = `
+    let tarjeta = `
         <div class="card mb-3">
         <div class="row g-0">
         <div class="col-md-4">
@@ -27,11 +27,10 @@ const datosJuegos =()=>{
         </div>
         </div> 
         `;
-        col.innerHTML= tarjeta;
-        contenedor.append(col);
-    } else {
-        contenedor.innerHTML= "No se encuentro detalles del juego Seleccionado"
-    }
-
+    col.innerHTML = tarjeta;
+    contenedor.append(col);
+  } else {
+    contenedor.innerHTML = "No se encuentro detalles del juego Seleccionado";
+  }
 };
 datosJuegos();
