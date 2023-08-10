@@ -2,6 +2,10 @@ body {
   background-image: none;
 }
 
+iframe {
+  min-height: 300px;
+}
+
 .logo {
   width: 30px;
 }
@@ -20,10 +24,16 @@ body {
   .btn-sesion {
     width: 25%;
   }
+  iframe {
+    min-height: 400px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .btn-sesion {
     width: 50%;
+  }
+  iframe {
+    min-height: 500px;
   }
 }
