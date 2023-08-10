@@ -56,17 +56,22 @@ const cerrarSesion = () => {
 
 if (usuario) {
   const contenido = `
-  <p class="m-0">${usuario.email}</p>
-  <button class="btn btn-danger" onclick="cerrarSesion()">Cerrar Sesión</button>`;
+  <div class="w-100 d-flex flex-column gap-3 flex-lg-row align-items-lg-center">
+    <p class="m-0 text-nowrap">${usuario.nombre} ${usuario.apellido}</p>
+    <button class="btn btn-danger btn-sesion" onclick="cerrarSesion()">Cerrar Sesión</button>
+  </div>`;
+
   botonesSesion.innerHTML = contenido;
 } else {
-  const contenido = `           
-  <a href="/pages/login.html" class="btn btn-outline-light" >
-    Iniciar Sesion
-  </a>
-  <a href="/pages/registro.html" class="btn btn-light" >
-    Registrarse
-  </a>`;
+  const contenido = `      
+  <div class="w-100 d-flex flex-column gap-3 flex-lg-row">     
+    <a href="/pages/login.html" class="btn btn-outline-light btn-sesion text-nowrap" >
+      Iniciar Sesion
+    </a>
+    <a href="/pages/registro.html" class="btn btn-light btn-sesion" >
+      Registrarse
+    </a>
+  </div>`;
   botonesSesion.innerHTML = contenido;
 }
 
@@ -165,8 +170,8 @@ const inicializacionUsuarios = () => {
   const data = [
     {
       id: 1,
-      nombre:"Ignacio",
-      apellido:"Brandan",
+      nombre: "Ignacio",
+      apellido: "Brandan",
       email: "ignacio@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -174,8 +179,8 @@ const inicializacionUsuarios = () => {
     },
     {
       id: 2,
-      nombre:"Abel",
-      apellido:"Lobo",
+      nombre: "Abel",
+      apellido: "Lobo",
       email: "abel@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -183,8 +188,8 @@ const inicializacionUsuarios = () => {
     },
     {
       id: 3,
-      nombre:"Gonzalo",
-      apellido:"garcia",
+      nombre: "Gonzalo",
+      apellido: "garcia",
       email: "gonzalo@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -192,8 +197,8 @@ const inicializacionUsuarios = () => {
     },
     {
       id: 4,
-      nombre:"Flor",
-      apellido:"Zelarayan",
+      nombre: "Flor",
+      apellido: "Zelarayan",
       email: "flor@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -202,7 +207,15 @@ const inicializacionUsuarios = () => {
   ];
 
   data.forEach((usuario) => {
-    usuarios.push(new Usuario(usuario.id, usuario.nombre, usuario.apellido, usuario.email, usuario.password));
+    usuarios.push(
+      new Usuario(
+        usuario.id,
+        usuario.nombre,
+        usuario.apellido,
+        usuario.email,
+        usuario.password
+      )
+    );
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     location.reload();
   });

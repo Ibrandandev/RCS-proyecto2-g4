@@ -8,19 +8,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/vapor/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="/css/global.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand text-body" href="/"
-          >RollingGames
-          <!-- <img
-            src="/assets/images/logo.png"
-            alt="Logo"
-            class="d-inline-block align-text-top"
-        /> -->
-        </a>
+        <a class="navbar-brand text-body" href="/">RollingGames</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,7 +26,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbar">
+        <div class="collapse navbar-collapse py-3 py-lg-1" id="navbar">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar-ul">
             <li class="nav-item">
               <a class="nav-link text-body" href="/">Inicio</a>
@@ -52,13 +46,40 @@
             </li>
           </ul>
           <div
-            class="login d-flex align-items-center me-4 gap-4"
+            class="login d-flex align-items-center me-md-4"
             id="botones-sesion"
           ></div>
         </div>
       </div>
     </nav>
-    <main class="container py-3"></main>
+    <main>
+      <div class="row my-5 py-5 ">
+        <div class=" col-12 col-md-4 offset-md-4 d-flex justify-content-center">
+          <div class="card" style="width: 30rem" >
+            <img src="../assets/LOGO.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">RollinGames</h5>
+              <p class="card-text">
+                <form id="formulario">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Ingrese su Correo</label>
+                      <input type="email" class="form-control" id="correo" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Ingrese su contraseña</label required>
+                      <input type="password" class="form-control" id="contraseña">
+                      <a href="/pages/error404.html"><p>¿Olvidaste tu contraseña?</p></a>
+                    </div>
+                    <div class="mt-4 d-flex justify-content-end">
+                        <button class="btn btn-primary ">Iniciar</button>
+                    </div>
+                  </form>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="mt-auto bg-dark text-body pt-5 pb-4 d-flex align-items-end">
       <div class="container text-center text-md-start">
         <div class="row text-center gap-4 gap-md-0">
@@ -122,6 +143,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/login.js"></script>
     <script src="/js/global.js"></script>
   </body>
 </html>

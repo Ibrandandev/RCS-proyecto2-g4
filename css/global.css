@@ -10,3 +10,20 @@ body {
   color: #170229 !important;
   font-weight: bold;
 }
+
+.btn-sesion {
+  width: 100%;
+  height: 38px;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-sesion {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btn-sesion {
+    width: 50%;
+  }
+}
