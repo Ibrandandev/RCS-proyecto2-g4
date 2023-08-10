@@ -77,7 +77,7 @@ const listarJuegos = () => {
       }
     });
   } else {
-    contenedorJuegos.innerHTML = `<p class="text-center">No hay juegos cargados</p>`;
+    contenedorJuegos.innerHTML = `<p class="text-center mt-3">No hay juegos cargados</p>`;
   }
 };
 

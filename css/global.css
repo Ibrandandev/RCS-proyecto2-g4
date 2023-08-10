@@ -31,7 +31,7 @@ iframe {
 
 @media screen and (min-width: 1024px) {
   .btn-sesion {
-    width: 50%;
+    width: 70%;
   }
   iframe {
     min-height: 500px;
