@@ -35,7 +35,7 @@ const registrarUsuario = (e) => {
     >
       <div style="color: #44d9e8; font-size: 1.4rem">
         <img
-          src="https://dev-rcs-proyecto2-g4.netlify.app/assets/images/logoEmail.png"
+          src="https://rcs-proyecto2-g4.vercel.app/assets/images/logoEmail.png"
           alt="Logo del Sitio"
           style="width: 150px; height: 150px; margin: 0 auto; display: block"
         />
@@ -64,7 +64,7 @@ const registrarUsuario = (e) => {
         </p>
         <div style="text-align: center; margin-top: 3rem">
           <a
-            href="https://dev-rcs-proyecto2-g4.netlify.app/pages/admin.html"
+            href="https://rcs-proyecto2-g4.vercel.app/pages/admin.html"
             style="
               color: #1a0933;
               background-color: #44d9e8;
