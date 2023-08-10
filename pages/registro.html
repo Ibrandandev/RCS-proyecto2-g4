@@ -57,9 +57,11 @@
         </div>
       </div>
     </nav>
-    <main class="container py-5">
+    <main
+      class="container py-5 flex-grow-1 d-flex flex-column justify-content-center"
+    >
       <div class="row justify-content-center">
-        <form id="formulario" class="col-6">
+        <form id="formulario" class="col-12 col-lg-6">
           <div class="row">
             <div class="col-sm-12 col-md-6 my-2 mx-auto">
               <label for="exampleInputEmail1" class="form-label">Nombre</label>
@@ -69,7 +71,7 @@
                 id="nombre"
                 aria-describedby="First name"
                 required
-                minlength="4"
+                minlength="3"
                 maxlength="20"
               />
               <div id="emailHelp" class="form-text"></div>
@@ -118,7 +120,9 @@
               max="30"
             />
           </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <div class="text-end">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
         </form>
       </div>
     </main>
