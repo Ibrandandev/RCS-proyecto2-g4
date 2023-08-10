@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/vapor/bootstrap.min.css"
     />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link rel="stylesheet" href="/css/global.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
@@ -58,7 +59,34 @@
         </div>
       </div>
     </nav>
-    <main class="container py-3"></main>
+    <main class="container py-5 ">
+      <div class="row mb-5 d-flex">
+        <form id="formulario">
+          <div class="row mt-3 mb-4">
+            <div class="col-sm-12 col-md-6 my-2 mx-auto">
+              <label for="exampleInputEmail1" class="form-label" >Nombre</label>
+              <input type="text" class="form-control"id="nombre" aria-describedby="First name" required minlength="4" maxlength="20">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 my-2 mx-auto">
+              <label for="exampleInputEmail1" class="form-label" >Apellido</label>
+              <input type="text" class="form-control" id="apellido" aria-describedby="Last name" required minlength="4" maxlength="20">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+          </div>
+        <div class="col my2-3 mx-auto">
+          <label for="exampleInputEmail1" class="form-label"> Correo Electronico</label>
+          <input type="email" class="form-control" id="correo" aria-describedby="email" required >
+          <div id="emailHelp" class="form-text">Tu privacidad es nuestra prioridad.</div>
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="exampleInputPassword1" class="form-label" >Contraseña</label>
+          <input type="password" class="form-control" id="contraseña" required min="8" max="30">
+        </div>
+        <button type="submit" class="btn btn-primary" >Enviar</button>
+      </form>
+    </div>
+    </main>
     <footer class="mt-auto bg-dark text-body pt-5 pb-4 d-flex align-items-end">
       <div class="container text-center text-md-start">
         <div class="row text-center gap-4 gap-md-0">
@@ -123,5 +151,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/js/global.js"></script>
+    <script src="/js/registrarUsuario.js"></script>
   </body>
 </html>
