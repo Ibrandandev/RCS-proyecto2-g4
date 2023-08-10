@@ -259,6 +259,6 @@ if (usuario) {
   div.innerHTML = content;
   main.append(div);
   setTimeout(() => {
-    location.replace("/");
+    location.replace("/pages/login.html");
   }, 1500);
 }
