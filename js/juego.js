@@ -1,13 +1,13 @@
-const parametro = new URLSearchParams(location.search);
-const idJuego = parametro.get("id");
+const datos = new URLSearchParams(location.search);
+const idJuego = datos.get("id");
 
 let contenedor = document.querySelector("#contenido");
 const juegos = JSON.parse(localStorage.getItem("juegos")) || [];
 
 const datosJuegos =()=>{
-    let juego = juegos.find((item)=>item.id == idJuego);
+    let detalle = juegos.find((juego)=>juego.id == idJuego);
 
-    if(juego) {
+    if(detalle) {
         let col =document.createElement("div");
         col.classList="col";
 
