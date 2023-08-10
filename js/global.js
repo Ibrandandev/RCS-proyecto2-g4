@@ -222,6 +222,7 @@ const inicializacionUsuarios = () => {
   ];
 
   data.forEach((usuario) => {
+
     usuarios.push(
       new Usuario(
         usuario.id,
