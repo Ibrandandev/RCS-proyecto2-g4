@@ -17,7 +17,7 @@ const enviarEmail = (e) => {
         height: 700px;
         width: 100%;
         background-color: #1a0933;
-        display: grid;s
+        display: grid;
         place-items: center;
       "
     >
@@ -27,6 +27,7 @@ const enviarEmail = (e) => {
         >
           Rolling Games
         </h1>
+        <img src="https://dev-rcs-proyecto2-g4.netlify.app/assets/images/logo.png" alt="Logo del Sitio"/>
         <p
           style="margin: 1rem auto; font-family: 'Lobster', cursive; max-width: 50%; text-align:center;"
         >
