@@ -2,9 +2,11 @@ body {
   background-image: none;
 }
 
+.logo {
+  width: 30px;
+}
 
-  img:hover{
-    filter: grayscale(50%);
-    transition: 350ms;
-  } 
-
+.link-categoria:hover {
+  color: #170229 !important;
+  font-weight: bold;
+}

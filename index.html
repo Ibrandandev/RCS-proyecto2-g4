@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/vapor/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -58,20 +59,31 @@
         </div>
       </div>
     </nav>
-    <main class="container py-3"></main>
+    <main class="container">
+      <form class="mt-4 d-flex justify-content-center" id="form-busqueda">
+        <input
+          type="search"
+          class="barra ps-3"
+          id="buscador"
+          placeholder="Buscar categoría"
+        />
+        <button type="submit" class="btn btn-dark btn-busqueda">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <section id="contenedor-destacado"></section>
+      <section id="contenedor-juegos" class="text-body"></section>
+    </main>
     <footer class="mt-auto bg-dark text-body pt-5 pb-4 d-flex align-items-end">
       <div class="container text-center text-md-start">
-        <div class="row text-center text-md-start">
-          <!-- PRIMERA COLUMNA - CATEGORIAS -->
-          <div class="columnas-footer col-xs-12 col-md-6 col-lg-3 mx-auto mt-3">
+        <div class="row text-center gap-4 gap-md-0">
+          <div class="columnas-footer col-xs-12 col-md-4 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold text-body">
               Categorias
             </h5>
             <div id="footer-categorias" class="d-flex flex-column gap-3"></div>
           </div>
-
-          <!-- SEGUNDA COLUMNA - INFORMACION -->
-          <div class="columnas-footer col-xs-12 col-md-6 col-lg-3 mx-auto mt-3">
+          <div class="columnas-footer col-xs-12 col-md-4 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold text-body">Info</h5>
             <p>
               <a href="/pages/contacto.html" class="text-body">Contactanos</a>
@@ -82,9 +94,7 @@
               >
             </p>
           </div>
-
-          <!-- TERCERA COLUMNA - REDES SOCIALES -->
-          <div class="col-xs-12 col-md-6 col-lg-3 mx-auto mt-3">
+          <div class="col-xs-12 col-md-4 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold text-body">
               Redes sociales
             </h5>
@@ -107,13 +117,13 @@
             </ul>
           </div>
         </div>
-
-        <!-- COPYRIGHT -->
         <div class="text-center mt-4">
           <hr />
           <p>
             ©️ Copyright 2023 - Derechos reservados
-            <a href="/pages/error404.html"> RollingCode </a>
+            <a href="https://rollingcodeschool.com/" target="_blank">
+              RollingCode
+            </a>
           </p>
         </div>
       </div>
@@ -128,5 +138,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/js/global.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
