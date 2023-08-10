@@ -3,24 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rolling Games</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/images/logoDoc.png"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/vapor/bootstrap.min.css"
     />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link rel="stylesheet" href="/css/global.css" />
+    <title>Rolling Games</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand text-body" href="/"
-          >RollingGames
-          <!-- <img
-            src="/assets/images/logo.png"
-            alt="Logo"
-            class="d-inline-block align-text-top"
-        /> -->
-        </a>
+        <a class="navbar-brand text-body" href="/">RollingGames</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,7 +31,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbar">
+        <div class="collapse navbar-collapse py-3 py-lg-1" id="navbar">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar-ul">
             <li class="nav-item">
               <a class="nav-link text-body" href="/">Inicio</a>
@@ -52,39 +51,80 @@
             </li>
           </ul>
           <div
-            class="login d-flex align-items-center me-4 gap-4"
+            class="login d-flex align-items-center me-md-4"
             id="botones-sesion"
           ></div>
         </div>
       </div>
     </nav>
-    <main class="container py-5 ">
-      <div class="row mb-5 d-flex">
-        <form id="formulario">
-          <div class="row mt-3 mb-4">
+    <main
+      class="container py-5 flex-grow-1 d-flex flex-column justify-content-center"
+    >
+      <div class="row justify-content-center">
+        <form id="formulario" class="col-12 col-lg-6">
+          <div class="row">
             <div class="col-sm-12 col-md-6 my-2 mx-auto">
-              <label for="exampleInputEmail1" class="form-label" >Nombre</label>
-              <input type="text" class="form-control"id="nombre" aria-describedby="First name">
+              <label for="exampleInputEmail1" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                aria-describedby="First name"
+                required
+                minlength="3"
+                maxlength="20"
+              />
               <div id="emailHelp" class="form-text"></div>
             </div>
             <div class="col-sm-12 col-md-6 my-2 mx-auto">
-              <label for="exampleInputEmail1" class="form-label" >Apellido</label>
-              <input type="text" class="form-control" id="apellido" aria-describedby="Last name">
+              <label for="exampleInputEmail1" class="form-label"
+                >Apellido</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="apellido"
+                aria-describedby="Last name"
+                required
+                minlength="4"
+                maxlength="20"
+              />
               <div id="emailHelp" class="form-text"></div>
             </div>
           </div>
-        <div class="col my2-3 mx-auto">
-          <label for="exampleInputEmail1" class="form-label"> Correo Electronico</label>
-          <input type="email" class="form-control" id="correo" aria-describedby="email">
-          <div id="emailHelp" class="form-text">Tu privacidad es nuestra prioridad.</div>
-        </div>
-        <div class="mb-3 mt-3">
-          <label for="exampleInputPassword1" class="form-label" >Contraseña</label>
-          <input type="password" class="form-control" id="contraseña">
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-    </div>
+          <div class="col my2-3 mx-auto">
+            <label for="exampleInputEmail1" class="form-label">
+              Correo Electronico</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="correo"
+              aria-describedby="email"
+              required
+            />
+            <div id="emailHelp" class="form-text">
+              Tu privacidad es nuestra prioridad.
+            </div>
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Contraseña</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="contraseña"
+              required
+              min="8"
+              max="30"
+            />
+          </div>
+          <div class="text-end">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </div>
     </main>
     <footer class="mt-auto bg-dark text-body pt-5 pb-4 d-flex align-items-end">
       <div class="container text-center text-md-start">
@@ -150,6 +190,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/js/global.js"></script>
-    <script src="/js/registrarUsuario.js"></script>
+    <script src="/js/registro.js"></script>
   </body>
 </html>

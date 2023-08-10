@@ -1,0 +1,8 @@
+img:hover {
+  filter: grayscale(50%);
+  transition: 350ms;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+}

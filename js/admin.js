@@ -14,6 +14,10 @@ const formAgregarJuego = document.querySelector("#form-agregar-juego");
 
 const formModificarJuego = document.querySelector("#form-modificar-juego");
 
+const cuerpoTablaUsuarios = document.querySelector("#cuerpo-tabla-usuarios");
+
+const main = document.querySelector("#main-admin");
+
 const listarCategoriasEnSelect = (update = 0) => {
   selectCategorias.innerHTML = "";
   selectModificarCategorias.innerHTML = "";
@@ -175,8 +179,6 @@ const cargarTablaJuegos = () => {
   }
 };
 
-const cuerpoTablaUsuarios = document.querySelector("#cuerpo-tabla-usuarios");
-
 const establecerTipo = (id) => {
   const index = usuarios.findIndex((juego) => juego.id === id);
   if (index != -1) {
@@ -240,5 +242,23 @@ const cargarTablaUsuarios = () => {
 formAgregarJuego.addEventListener("submit", agregarJuego);
 formModificarJuego.addEventListener("submit", modificarJuego);
 
-cargarTablaJuegos();
-cargarTablaUsuarios();
+if (usuario) {
+  if (usuario.admin) {
+    cargarTablaJuegos();
+    cargarTablaUsuarios();
+  }
+} else {
+  main.innerHTML = "";
+  const div = document.createElement("div");
+  const content = `<div class="col">
+    <div class="alert alert-danger" role="alert">
+    No tiene permisos para acceder a esta página!
+    </div>  
+    </div>    
+    `;
+  div.innerHTML = content;
+  main.append(div);
+  setTimeout(() => {
+    location.replace("/pages/login.html");
+  }, 1500);
+}

@@ -3,24 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rolling Games</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/images/logoDoc.png"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/vapor/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/error404.css" />
+    <title>Rolling Games</title>
   </head>
   <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand text-body" href="/"
-          >RollingGames
-          <!-- <img
-            src="/assets/images/logo.png"
-            alt="Logo"
-            class="d-inline-block align-text-top"
-        /> -->
-        </a>
+        <a class="navbar-brand text-body" href="/">RollingGames</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,7 +31,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbar">
+        <div class="collapse navbar-collapse py-3 py-lg-1" id="navbar">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar-ul">
             <li class="nav-item">
               <a class="nav-link text-body" href="/">Inicio</a>
@@ -52,17 +51,31 @@
             </li>
           </ul>
           <div
-            class="login d-flex align-items-center me-4 gap-4"
+            class="login d-flex align-items-center me-md-4"
             id="botones-sesion"
           ></div>
         </div>
       </div>
     </nav>
     <main
-      class="d-flex justify-content-center align-items-center flex-column bg-light flex-grow-1 text-dark"
+      class="d-flex justify-content-center align-items-center flex-column flex-grow-1 text-body py-5 py-md-0"
     >
-      <h2 class="fs-1 fw-bold text-center">Error 404</h2>
-      <p>Pagina No Encontrada</p>
+      <div class="my-5">
+        <div class="d-flex align-items-center error">
+          <div class="d-flex flex-column text-uppercase text-secondary me-md-5">
+            <span>g</span><span>a</span><span>m</span><span>e</span>
+          </div>
+          <div class="mx-4 mx-md-5 text-center">
+            <p>
+              4<span class="mx-2"><i class="fa-solid fa-face-dizzy"></i></span>4
+            </p>
+            <p class="fs-5 text-decoration-underline">Pagina No Encontrada</p>
+          </div>
+          <div class="d-flex flex-column text-uppercase text-secondary ms-md-5">
+            <span>o</span><span>v</span><span>e</span><span>r</span>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="mt-auto bg-dark text-body pt-5 pb-4 d-flex align-items-end">
       <div class="container text-center text-md-start">

@@ -1,0 +1,18 @@
+.error span,
+.error p {
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .error span,
+  .error p {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .error span,
+  .error p {
+    font-size: 5rem;
+  }
+}

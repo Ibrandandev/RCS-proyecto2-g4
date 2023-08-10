@@ -13,14 +13,22 @@ class Juego {
 }
 
 class Usuario {
-  constructor(id, nombre, apellido, email, password) {
+  constructor(
+    id,
+    nombre,
+    apellido,
+    email,
+    password,
+    aprobado = false,
+    admin = false
+  ) {
     this.id = id;
     this.nombre = nombre;
     this.apellido = apellido;
     this.email = email;
     this.password = password;
-    this.aprobado = false;
-    this.admin = false;
+    this.aprobado = aprobado;
+    this.admin = admin;
   }
 }
 
@@ -41,7 +49,7 @@ const ulCategorias = document.querySelector("#ul-categorias");
 
 const footerCategorias = document.querySelector("#footer-categorias");
 
-const usuario = localStorage.getItem("usuario") || null;
+const usuario = JSON.parse(localStorage.getItem("usuario")) || null;
 
 const navbarUl = document.querySelector("#navbar-ul");
 
@@ -56,30 +64,37 @@ const cerrarSesion = () => {
 
 if (usuario) {
   const contenido = `
-  <p class="m-0">${usuario.email}</p>
-  <button class="btn btn-danger" onclick="cerrarSesion()">Cerrar Sesión</button>`;
+  <div class="w-100 d-flex flex-column gap-3 flex-lg-row align-items-lg-center">
+    <p class="m-0 text-nowrap">${usuario.nombre} ${usuario.apellido}</p>
+    <button class="btn btn-danger btn-sesion text-nowrap" onclick="cerrarSesion()">Cerrar Sesión</button>
+  </div>`;
+
   botonesSesion.innerHTML = contenido;
 } else {
-  const contenido = `           
-  <a href="/pages/login.html" class="btn btn-outline-light" >
-    Iniciar Sesion
-  </a>
-  <a href="/pages/registro.html" class="btn btn-light" >
-    Registrarse
-  </a>`;
+  const contenido = `      
+  <div class="w-100 d-flex flex-column gap-3 flex-lg-row">     
+    <a href="/pages/login.html" class="btn btn-outline-light btn-sesion text-nowrap" >
+      Iniciar Sesion
+    </a>
+    <a href="/pages/registro.html" class="btn btn-light btn-sesion" >
+      Registrarse
+    </a>
+  </div>`;
   botonesSesion.innerHTML = contenido;
 }
 
 if (usuario) {
-  const li = document.createElement("li");
-  li.classList = "nav-item";
-  const liContenido = `
+  if (usuario.admin) {
+    const li = document.createElement("li");
+    li.classList = "nav-item";
+    const liContenido = `
   <a class="nav-link text-body" href="/pages/admin.html">
     Administracion
   </a>
   `;
-  li.innerHTML = liContenido;
-  navbarUl.append(li);
+    li.innerHTML = liContenido;
+    navbarUl.append(li);
+  }
 }
 
 const inicializacionJuegos = () => {
@@ -87,7 +102,8 @@ const inicializacionJuegos = () => {
     {
       id: 2,
       nombre: "Red Dead Redemption 2",
-      descripcion: "Descripcion Breve",
+      descripcion:
+        "Red Dead Redemption 2 es un videojuego de acción-aventura western basado en el drama. Un juego bastante conocido  por sus cantidades de detalles realistas en un mundo abierto.  ",
       categoria: "Accion",
       precio: 500,
       imagen:
@@ -99,7 +115,8 @@ const inicializacionJuegos = () => {
     {
       id: 3,
       nombre: "FIFA 23",
-      descripcion: "Descripcion Breve",
+      descripcion:
+        "FIFA 23 es un videojuego de simulación de fútbol publicado por Electronic Arts. Es la trigésima entrega de la serie FIFA desarrollada por EA Sports",
       categoria: "Deportes",
       precio: 750,
       imagen:
@@ -111,7 +128,8 @@ const inicializacionJuegos = () => {
     {
       id: 4,
       nombre: "Grand Theft Auto V",
-      descripcion: "Descripcion Breve",
+      descripcion:
+        "Grand Theft Auto V es un videojuego de acción-aventura de mundo abierto en tercera persona desarrollado por el estudio escocés Rockstar North y distribuido por Rockstar Games",
       categoria: "Simulacion",
       precio: 250,
       imagen:
@@ -123,7 +141,8 @@ const inicializacionJuegos = () => {
     {
       id: 5,
       nombre: "Need for Speed: Underground 2",
-      descripcion: "Descripcion Breve",
+      descripcion:
+        "Need for Speed: Underground 2 es un videojuego de carreras publicado por Electronic Arts y desarrollado por EA Black Box",
       categoria: "Simulacion",
       precio: 999,
       imagen:
@@ -134,7 +153,8 @@ const inicializacionJuegos = () => {
     {
       id: 6,
       nombre: "Battlefield V",
-      descripcion: "Descripcion Breve",
+      descripcion:
+        "Battlefield V es un videojuego de disparos y acción bélica en primera persona​ desarrollado por EA Digital Illusions CE y distribuido por Electronic Arts",
       categoria: "Accion",
       precio: 740,
       imagen:
@@ -165,8 +185,8 @@ const inicializacionUsuarios = () => {
   const data = [
     {
       id: 1,
-      nombre:"Ignacio",
-      apellido:"Brandan",
+      nombre: "Ignacio",
+      apellido: "Brandan",
       email: "ignacio@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -174,8 +194,8 @@ const inicializacionUsuarios = () => {
     },
     {
       id: 2,
-      nombre:"Abel",
-      apellido:"Lobo",
+      nombre: "Abel",
+      apellido: "Lobo",
       email: "abel@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -183,8 +203,8 @@ const inicializacionUsuarios = () => {
     },
     {
       id: 3,
-      nombre:"Gonzalo",
-      apellido:"garcia",
+      nombre: "Gonzalo",
+      apellido: "garcia",
       email: "gonzalo@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -192,8 +212,8 @@ const inicializacionUsuarios = () => {
     },
     {
       id: 4,
-      nombre:"Flor",
-      apellido:"Zelarayan",
+      nombre: "Flor",
+      apellido: "Zelarayan",
       email: "flor@rolling.com",
       password: "12345678",
       aprobado: true,
@@ -202,7 +222,18 @@ const inicializacionUsuarios = () => {
   ];
 
   data.forEach((usuario) => {
-    usuarios.push(new Usuario(usuario.id, usuario.nombre, usuario.apellido, usuario.email, usuario.password));
+
+    usuarios.push(
+      new Usuario(
+        usuario.id,
+        usuario.nombre,
+        usuario.apellido,
+        usuario.email,
+        usuario.password,
+        usuario.aprobado,
+        usuario.admin
+      )
+    );
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     location.reload();
   });
